@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<!-- <meta name="title" property="og:title" content="조아름 포토폴리오">
+		<meta name="images" property="og:image" content="images/kalogo.jpg"> -->
+		<title>Matrix Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="matrix.css">
+		<link rel="icon" href="calculator.ico">
+	</head>
+	<body>
+		<div class="confix">
+			<h1 class="title">MATRIX CALCULATOR</h1>
+			<div class="matrix_flex">
+				<section class="matrix_cal item">
+					<div class="matrix_num">
+						<div class="matrix_tit">
+							<h2>MATRIX A</h2>
+							<span id="firstText">Please enter from 1 to 7</span>
+						</div>
+						<div class="input_list">
+							<div id="firstRow" class="input_box">
+								<label for="firstRowSize"><span id="firstRowLabel">ROW</span></label>
+								<input id="firstRowSize" type="number" name="firstRowSize" min="1" max="7" value="1" step="1" maxlength="1">
+							</div>
+							<div id="firstColumn" class="input_box">
+								<label for="firstColumnSize"><span id="firstColumnLabel">COLUMN</span></label>
+								<input id="firstColumnSize" type="number" name="firstColumnSize" min="1" max="7"value="1" step="1" maxlength="1">
+							</div>
+						</div>
+						<div class="btn_box">
+							<button id="firstOutputBtn" class="output_btn" type="button"><span>OUTPUT</span></button>
+							<button id="firstRandomBtn" class="random_btn" type="button"><span>RANDOM</span></button>
+							<button id="firstUnitBtn" class="unit_btn" type="button"><span>UNIT</span></button>
+						</div>
+					</div>
+					<div id="firstInputMatrix" class="matrix_box"></div>
+				</section>
+				
+				<section class="matrix_cal item">
+					<div class="matrix_num">
+						<div class="matrix_tit">
+							<h2>MATRIX B</h2>
+							<span id="secondText">Please enter from 1 to 7</span>
+						</div>
+						<div class="input_list">
+							<div id="secondRow" class="input_box">
+								<label for="secondRowSize"><span id="secondRowLabel">ROW</span></label>
+								<input id="secondRowSize" type="number" name="secondRowSize" min="1" max="7" value="1" step="1" maxlength="1">
+							</div>
+							<div id="secondColumn" class="input_box">
+								<label for="secondRowSize"><span id="secondColumnLabel">COLUMN</span></label>
+								<input id="secondColumnSize" type="number" name="secondColumnSize" min="1" max="7"value="1" step="1" maxlength="1">
+							</div>
+						</div>
+						<div class="btn_box">
+							<button id="secondOutputBtn" class="output_btn" type="button"><span>OUTPUT</span></button>
+							<button id="secondRandomBtn" class="random_btn" type="button"><span>RANDOM</span></button>
+							<button id="secondUnitBtn" class="unit_btn" type="button"><span>UNIT</span></button>
+						</div>
+					</div>
+					<div id="secondInputMatrix" class="matrix_box"></div>
+				</section>
+
+				<section class="matrix_cal item">
+					<div class="matrix_num">
+						<div class="matrix_tit">
+							<h2>RESULT</h2>
+							<span id="resultText" class="result_text">The result of MATRIX A and MATRIX B</span>
+						</div>
+						<div class="btn_box btn_icon">
+							<button id="plusBtn" class="plus_btn" type="button"><span>더하기</span></button>
+							<button id="minusBtn" class="minus_btn" type="button"><span>빼기</span></button>
+							<button id="multiBtn" class="multi_btn" type="button"><span>곱하기</span></button>
+						</div>
+					</div>
+					<div id="resultMatrix" class="matrix_box result_box"></div>
+				</section>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="matrix.js"></script>
+	</body>
+
+</html>
+

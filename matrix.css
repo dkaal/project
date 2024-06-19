@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+/****************** Base Reset Style ******************/
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-text-size-adjust:none;
+    color:#111;
+}
+html{
+    font-size:100px;
+    width:100%;
+}
+body,button,input,select,table,textarea{
+    font-size:12px;
+}
+body{
+    padding-bottom:0.5rem;
+    background-color: #bcd0b7;
+}
+button{
+    border:none;
+    background-color:unset;
+    cursor:pointer;
+}
+input{
+    border:none;
+    background-color:unset;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:focus {
+    outline:none;
+}
+.confix{
+    margin:0 auto;
+    width:90%;
+    max-width:12rem;
+}
+
+/****************** Main Style ******************/
+.title{
+    padding:0.5rem 0;
+    font-size:0.48rem;
+    font-weight:900;
+    text-align:center;
+    text-shadow:0.05rem 0.05rem #21432e;
+    letter-spacing: 0.03rem;
+    color: #527754;
+}
+.matrix_cal .matrix_num{
+    position:relative;
+    width:100%;
+    margin-bottom:0.2rem;
+    padding:0.2rem;
+    box-sizing:border-box;
+    border-radius:0.2rem;
+    background-color:#fff;
+}
+.matrix_cal .matrix_num .matrix_tit{
+    margin-bottom:0.2rem}
+.matrix_cal .matrix_num .matrix_tit h2{
+    font-size:0.35rem;
+    line-height:0.42rem;
+     color:#527754;
+}
+.matrix_cal .matrix_num .matrix_tit span{
+    display:inline-block;
+    height:0.55rem;
+    padding-top:0.1rem;
+    font-size:0.18rem;
+    color:#bcd0b7;
+}
+.matrix_cal .matrix_num .matrix_tit .result_text{
+    height:1.2rem;
+    padding-top:0.1rem;
+}
+.matrix_cal .matrix_num .input_list{
+    display:flex;
+}
+.matrix_cal .matrix_num .input_list .input_box{
+    display:flex;
+    width:100%;
+    border:0.03rem solid #bcd0b7;
+    border-radius:0.2rem;
+}
+.matrix_cal .matrix_num .input_list .input_box:nth-child(1){
+    margin-right: 0.2rem;
+}
+.matrix_cal .matrix_num .input_list .input_box label{
+    width:100%;
+    padding:0.1rem;
+    font-weight:700;
+    text-align:center;
+}
+.matrix_cal .matrix_num .input_list .input_box label span{
+    font-size:0.15rem;
+    line-height:0.3rem;
+    color: #bcd0b7;
+}
+.matrix_cal .matrix_num .input_list .input_box input{
+    width:100%;
+    padding:0.1rem 0;
+    font-weight:700;
+    text-align:center;
+    font-size:0.18rem;
+    color: #bcd0b7;
+}
+.matrix_cal .matrix_num .btn_box{
+    display:flex;
+    margin-top:0.1rem;
+     border-radius:0.2rem;
+    background-color: #bcd0b7;
+}
+.matrix_cal .matrix_num .btn_box button{
+    width:100%;
+    padding:0.18rem 0;
+}
+.matrix_cal .matrix_num .btn_box button:hover{
+    border-radius:0.2rem;
+    background-color:#527754;
+}
+.matrix_cal .matrix_num .btn_box button span{
+    font-size:0.15rem;
+    color:#fff;
+    font-weight:700;
+}
+.matrix_cal .matrix_num .btn_box.btn_icon button{
+    padding:0.2rem 0;
+}
+.matrix_cal .matrix_num .btn_box.btn_icon button span{
+    display:block;
+    width:0.19rem;
+    height:0.19rem;
+    margin:0 auto;
+    background-size:cover;
+    font-size: 0;
+}
+.matrix_cal .matrix_num .btn_box.btn_icon .plus_btn span{
+    background-image:url("./icon_plus.png");
+}
+.matrix_cal .matrix_num .btn_box.btn_icon .minus_btn span{
+    background-image:url("./icon_minus.png");
+}
+.matrix_cal .matrix_num .btn_box.btn_icon .multi_btn span{
+    background-image:url("./icon_multi.png");
+}
+.matrix_cal .matrix_box{
+    position:relative;
+    width:100%;
+    height:4.45rem;
+    margin-bottom:0.5rem;
+    padding:0.2rem;
+    box-sizing:border-box;
+    border-radius:0.2rem;
+    background-color:#fff;
+}
+.matrix_cal .matrix_box .matrix_center{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    box-sizing:border-box;
+    padding:0.2rem}
+.matrix_cal .matrix_box .matrix_center .matrix_input{
+    display:flex;
+    justify-content:center;
+}
+.matrix_cal .matrix_box .matrix_center .matrix_input:nth-child(n+2){
+    margin-top: 0.1rem;
+}
+.matrix_cal .matrix_box .matrix_center .matrix_input .matrix_result,
+.matrix_cal .matrix_box .matrix_center .matrix_input .div_matrix{
+    width:100%;
+    max-width:0.5rem;
+    padding:0.14rem 0;
+    border-radius:0.1rem;
+    background-color:#bcd0b7;
+    text-align:center;
+    font-size:0.15rem;
+    color:#fff;
+}
+.matrix_cal .matrix_box .matrix_center .matrix_input .matrix_result:nth-child(n+2),
+.matrix_cal .matrix_box .matrix_center .matrix_input .div_matrix:nth-child(n+2){
+    margin-left:0.1rem;
+}
+.error_message{
+    padding:1.5rem 0.2rem 0 0.2rem;
+    font-weight:500;
+    font-size:0.2rem;
+    text-align:center;
+    color:#f09999;
+}
+
+/* 해당영역 흔들기 애니메이션 */
+.vibration { 
+    animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+    from {
+        transform: rotate(2deg);
+    }
+    to {
+        transform: rotate(-2deg);
+    }
+}
+
+/* Tablet */
+@media all and (min-width:768px){
+    .title{
+        font-size:0.7rem;
+        letter-spacing: 0.06rem;
+        text-shadow:0.07rem 0.06rem #21432e;
+    }
+    .matrix_flex{
+        display:flex;
+        flex-wrap: wrap;
+    }
+	.matrix_flex .item{
+        flex: 1 1 40%;
+    }
+    .matrix_cal:nth-child(2){
+        margin-left:0.2rem;
+    }
+}
+
+/* PC */
+@media all and (min-width:1132px){
+
+    .title{
+        font-size:0.8rem;
+    }
+    .matrix_flex{
+        display:flex;
+    } 
+    .matrix_flex .item{
+        flex:1;
+    }
+    .matrix_cal:nth-child(3){
+        margin-left:0.2rem;
+    }
+    .matrix_cal .matrix_box{
+        margin-bottom: 0;
+        height: 3.9rem;
+    }
+    .matrix_cal .matrix_box .matrix_center .matrix_input .matrix_result,
+    .matrix_cal .matrix_box .matrix_center .matrix_input .div_matrix{
+        padding:0.1rem 0;
+    }
+    .matrix_cal .result_box{
+        min-width:4.5rem;
+    }
+    
+}
